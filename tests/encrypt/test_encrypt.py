@@ -9,6 +9,8 @@ def test_encrypt_message():
     with pytest.raises(TypeError):
         encrypt_message(123, 123)
 
+    assert encrypt_message("Cachorro", 20) == "orrohcaC"
+
     assert encrypt_message("Cachorro", 6) == "or_rohcaC"
 
     assert encrypt_message("Cachorro", 7) == "rrohcaC_o"
